@@ -11,7 +11,7 @@ for `sudo` or `root` put the `nanrorc_root` file in
 - `/root/.nanorc`
 
 # Notes
-Rename the file to `.nanorc` for placing it in home folder or `nanorc` for `/etc/` folder.
+Rename the file to `.nanorc` for placing it in `/home/{$USER}` folder or `nanorc` for `/etc/` folder.
 
 If a file already exists, you can replace the existing
 
