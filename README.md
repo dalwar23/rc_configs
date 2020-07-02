@@ -2,6 +2,9 @@
 A repository for run commands - configuration files
 
 # Locations
+
+## nano
+
 Please cosider these locations for `nanorc` file:
 
 - `~/.nanorc` will only affect the logged in user
@@ -16,3 +19,18 @@ Rename the file to `.nanorc` for placing it in `/home/{$USER}` folder or `nanorc
 If a file already exists, you can replace the existing
 
 Cheers!
+
+## Starship
+
+~/.config/starship.toml
+
+
+## iterm2
+
+Import the .itermcolors file into iterm from profile preferneces with `import` option
+
+
+## terminal
+
+Import from profile - preferences
+
