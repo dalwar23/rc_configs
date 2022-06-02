@@ -1,35 +1,36 @@
+# Load aliases
 source ~/.config/fish/alias.fish
 
-# Fish syntax highlighting
-set -g fish_color_autosuggestion '555'  'brblack'
-set -g fish_color_cancel -r
-set -g fish_color_command --bold
-set -g fish_color_comment red
-set -g fish_color_cwd green
-set -g fish_color_cwd_root red
-set -g fish_color_end brmagenta
-set -g fish_color_error brred
-set -g fish_color_escape 'bryellow'  '--bold'
-set -g fish_color_history_current --bold
-set -g fish_color_host normal
-set -g fish_color_match --background=brblue
-set -g fish_color_normal normal
-set -g fish_color_operator bryellow
-set -g fish_color_param cyan
-set -g fish_color_quote yellow
-set -g fish_color_redirection brblue
-set -g fish_color_search_match 'bryellow'  '--background=brblack'
-set -g fish_color_selection 'white'  '--bold'  '--background=brblack'
-set -g fish_color_user brgreen
-set -g fish_color_valid_path --underline
+if status is-interactive
+    # Commands to run in interactive sessions can go here
+end
 
-# Install Starship
-starship init fish | source
+# starship.rs
+# starship init fish | source
 
 # Pipenv
 set -x PIPENV_VENV_IN_PROJECT 1
+set -x VIRTUAL_ENV_DISABLE_PROMPT 1
 set LANG en_US.UTF-8
 set -x LC_ALL en_US.UTF-8
 
 # GPG signing passpharse to tty
 set -x GPG_TTY (tty)
+
+# bobthefish theme settings
+set -g theme_powerline_fonts no
+set -g theme_nerd_fonts yes
+set -g fish_prompt_pwd_dir_length 0
+set -g theme_display_k8s_namespace yes
+set -g theme_display_k8s_context yes
+set -g theme_display_user yes
+# set -g theme_display_hostname yes
+
+# node 14
+fish_add_path /usr/local/opt/node@14/bin
+
+# mysql client
+fish_add_path /usr/local/opt/mysql-client/bin
+set -gx PKG_CONFIG_PATH "/usr/local/opt/mysql-client/lib/pkgconfig"
+set -gx LDFLAGS "-L/usr/local/opt/mysql-client/lib"
+set -gx CPPFLAGS "-I/usr/local/opt/mysql-client/include"
