@@ -1,0 +1,24 @@
+.terraform.lock.hcl
+.pre-commit-config.yaml
+.vscode/
+.idea/
+
+# Personal cluster (EKS)
+dev-dh-sz.tfvars
+dev-dh-dbp.tfvars
+dev-tk-sz.tfvars
+dev-tk-dbp.tfvars
+
+# Errored Terraform states
+errored.tfstate
+
+# TLS 
+tls.csr
+tls.key
+tls.crt
+
+# Any Key
+*.key
+
+# Autogen Script
+pre-commit-autogen-manifests.sh

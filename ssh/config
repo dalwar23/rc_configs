@@ -1,0 +1,44 @@
+#Host DUMMY #GitHub#
+
+Host github.com #GitHub
+  HostName ssh.github.com
+  User git
+  Port 443
+  ProxyCommand nc -X connect -x <proxy> %h %p
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/id_ed25519
+
+#Host DUMMY #Local Kubernetes Cluster#
+
+Host k8s-cp cp #K8S-Control-Plane
+  HostName 192.168.200.20
+  User kubernetes
+  Port 22
+  IdentityFile ~/.ssh/id_ed25519_k8s
+
+Host k8s-wn1 wn1 #K8S-Worker-Node1
+  HostName 192.168.200.30
+  User kubernetes
+  Port 22
+  IdentityFile ~/.ssh/id_ed25519_k8s
+
+Host k8s-wn2 wn2 #K8S-Worker-Node2
+  HostName 192.168.200.31
+  User kubernetes
+  Port 22
+  IdentityFile ~/.ssh/id_ed25519_k8s
+
+Host k8s-wn3 wn3 #K8S-Worker-Node3
+  HostName 192.168.200.32
+  User kubernetes
+  Port 22
+  IdentityFile ~/.ssh/id_ed25519_k8s
+
+#Host DUMMY #Manjaro#
+
+Host manjaro #Manjaro Workstation
+  HostName 172.23.67.31
+  Port 22
+  User ok026
+  IdentityFile ~/.ssh/id_ed25519
+
