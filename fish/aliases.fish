@@ -37,6 +37,3 @@ alias reload='exec fish'
 
 # Newreleases.io
 alias nr='newreleases'
-
-# DBG VPN
-alias vpn='sudo openconnect --no-proxy --servercert pin-sha256:emrjzHFvZdz1zO2mgpA7IuvweaObeMgA4Q+1tYsoCvY= development1.dbgvpn.de/DBGdev'
