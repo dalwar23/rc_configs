@@ -18,10 +18,6 @@ abbr -a tfws terraform workspace select
 alias ls='exa -1 --icons'
 alias ll='exa -a --git --modified --created --group --header --long --icons'
 
-# slack alias
-alias slack='slack --proxy-server="webproxy.deutsche-boerse.de:8080"'
-
-
 # GitHub CLI
 alias issues='gh issue list --search "is:open assignee:ok026"'
 alias infra-issues='gh issue list --search "is:open" --label "Infra/Ops :tractor:" --limit 200'
