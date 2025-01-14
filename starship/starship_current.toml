@@ -18,7 +18,7 @@ $character\
 """
 
 palette = 'dracula'
-add_newline = true
+add_newline = false
 
 [palettes.dracula]
 foreground = '#F8F8F2'
@@ -124,7 +124,7 @@ symbol = '󰎙 Node.js'
 # symbol = ' .NET'
 
 [python]
-format = '[─](fg:current_line)[](fg:green)[$symbol](fg:primary bg:green)[](fg:green bg:box)[ $version](fg:foreground bg:box)[](fg:box)'
+format = '[─](fg:current_line)[](fg:green)[$symbol](fg:primary bg:green)[](fg:green bg:box)[ \($virtualenv\) $version](fg:foreground bg:box)[](fg:box)'
 symbol = ' Python'
 
 [java]
